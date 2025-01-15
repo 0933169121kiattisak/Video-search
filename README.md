@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+This code is a React application that creates a video search and playback interface. Let me break down its key components and functionality:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Core Dependencies and Functionality:
 
-## Available Scripts
 
-In the project directory, you can run:
+Uses react-player for video playback
+Uses movie-trailer to fetch movie trailer URLs
+Uses React's useState hook for state management
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+State Variables:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+video: Stores the current search input text
+videoURL: Stores the URL of the video to be played (defaults to an Inception trailer)
+searchedVideo: Stores the name of the currently displayed video
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+Main Features:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Has a search box where users can enter movie/show names
+When the search button is clicked, it:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Updates the displayed video title
+Uses movieTrailer to fetch the YouTube URL for that movie's trailer
+Updates the video player with the new URL
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+User Interface Components:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+A search section with:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Text label
+Input field for movie/show name
+Search button
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+A video section with:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+ReactPlayer component that plays the video
+Title display showing the currently searched video
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+Here's a more detailed example of how it works:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+User types "The Matrix" in the search box
+User clicks search button
+Code calls movieTrailer("The Matrix")
+When the API returns with a YouTube URL, the video player updates to play The Matrix trailer
+The title updates to show "The Matrix"
