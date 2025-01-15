@@ -1,4 +1,4 @@
-This code is a React application that creates a video search and playback interface. Let me break down its key components and functionality:
+# Header This code is a React application that creates a video search and playback interface. Let me break down its key components and functionality:
 
 Core Dependencies and Functionality:
 Uses react-player for video playback
