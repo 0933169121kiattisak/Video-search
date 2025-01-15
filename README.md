@@ -1,6 +1,6 @@
 # Header This code is a React application that creates a video search and playback interface. Let me break down its key components and functionality:
 
-1. parent Core Dependencies and Functionality:
+1. first Core Dependencies and Functionality:
 1. child Uses react-player for video playback
 2. child Uses movie-trailer to fetch movie trailer URLs
 3. child Uses React's useState hook for state management
