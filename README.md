@@ -7,30 +7,30 @@
 
 
 2.State Variables:
--video: Stores the current search input text
--videoURL: Stores the URL of the video to be played (defaults to an Inception trailer)
--searchedVideo: Stores the name of the currently displayed video
-3.Main Features:
--Has a search box where users can enter movie/show names
+- video: Stores the current search input text
+- videoURL: Stores the URL of the video to be played (defaults to an Inception trailer)
+- searchedVideo: Stores the name of the currently displayed video
+3. Main Features:
+- Has a search box where users can enter movie/show names
 When the search button is clicked, it:
 Updates the displayed video title
 Uses movieTrailer to fetch the YouTube URL for that movie's trailer
 Updates the video player with the new URL
-4.User Interface Components:
--A search section with:
+4. User Interface Components:
+- A search section with:
 Text label
 Input field for movie/show name
 Search button
--A video section with:
+- A video section with:
 ReactPlayer component that plays the video
 Title display showing the currently searched video
 
 
 
-5.Here's a more detailed example of how it works:
+5. Here's a more detailed example of how it works:
 
--User types "The Matrix" in the search box
--User clicks search button
--Code calls movieTrailer("The Matrix")
--When the API returns with a YouTube URL, the video player updates to play The Matrix trailer
--The title updates to show "The Matrix"
+- User types "The Matrix" in the search box
+- User clicks search button
+- Code calls movieTrailer("The Matrix")
+- When the API returns with a YouTube URL, the video player updates to play The Matrix trailer
+- The title updates to show "The Matrix"
